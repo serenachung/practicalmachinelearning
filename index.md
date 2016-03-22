@@ -98,7 +98,7 @@ corrplot.mixed(corrMatrix, lower="color", upper="color"
 
 ### Building the Model
 
-Build two predictor models, one using random forest and boosted tree approaches. Use 10-fold cross validation for both approaches.  The accuracies of the two models are compared using the test data set that was set aside earlier. The random forest approach gives more accurate results at 98% vs. 89% accuracy and is chosen as the final model.  
+Build two predictor models, one using random forest and boosted tree approaches. Use 10-fold cross validation for both approaches.  The accuracies of the two models are compared using the test data set that was set aside earlier. The random forest approach gives more accurate results at 98% vs. 89% accuracy (latter not shown) and is chosen as the final model.  
 
 ```r
 modFitRF <- train(classe~.,data=myTraining,method="rf"
@@ -169,4 +169,13 @@ show(p)
 ```
 
 ![](index_files/figure-html/confusion-1.png)
+
+
+### Prediction
+
+The quiz questions were answered using the following:
+
+```r
+predQuiz <- predict(modFitRF,pml_testing)
+```
 
