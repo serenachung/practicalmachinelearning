@@ -152,7 +152,7 @@ print(mRF)
 ## Balanced Accuracy      0.9918   0.9855   0.9805   0.9900   0.9931
 ```
 
-The overall expected out of sample error is 98.2% as indicated by the above confusion matrix output when tested against the test set.  Below is a plot of the normalized confusion matrix.  The accuracy is 97% or greater for all classifications. 
+The overall expected out of sample error is 1.8% as indicated by the above confusion matrix output when tested against the test set.  Below is a plot of the normalized confusion matrix.  The accuracy is 97% or greater for all classifications. 
 
 ```r
 tRF <- mRF$table

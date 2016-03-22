@@ -217,7 +217,7 @@ mGBM &lt;- confusionMatrix(myTesting$classe,predict(modFitGBM,myTesting))</code>
 ## Detection Rate         0.2800   0.1879   0.1720   0.1609   0.1810
 ## Detection Prevalence   0.2845   0.1935   0.1743   0.1638   0.1839
 ## Balanced Accuracy      0.9918   0.9855   0.9805   0.9900   0.9931</code></pre>
-<p>The overall expected out of sample error is 98.2% as indicated by the above confusion matrix output when tested against the test set. Below is a plot of the normalized confusion matrix. The accuracy is 97% or greater for all classifications.</p>
+<p>The overall expected out of sample error is 1.8% as indicated by the above confusion matrix output when tested against the test set. Below is a plot of the normalized confusion matrix. The accuracy is 97% or greater for all classifications.</p>
 <pre class="r"><code>tRF &lt;- mRF$table
 tRFnormalized &lt;- tRF/rowSums(tRF)
 dfRFnormalized &lt;- as.data.frame(tRFnormalized)
